@@ -143,16 +143,6 @@ The project includes:
 
 ---
 
-# 📷 Dashboard Preview
-
-(Add screenshots here)
-
-Example:
-
-![Dashboard](Images/dashboard.png)
-
----
-
 # 🚀 Future Improvements
 
 - Live Railway API Integration
