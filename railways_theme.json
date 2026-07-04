@@ -1,0 +1,22 @@
+{
+  "name": "Railways Green",
+  "background": "#0B3D2E",
+  "foreground": "#E8F5EC",
+  "tableAccent": "#1DB954",
+  "dataColors": ["#1DB954","#F7D046","#FF4E8E","#4FC3F7","#FFB74D","#B39DDB","#81C784","#FF8A65"],
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{"color": {"solid": {"color": "#123D2C"}}, "transparency": 0}],
+        "border": [{"show": true, "color": {"solid": {"color": "#1DB954"}}, "radius": 12}],
+        "title": [{"fontColor": {"solid": {"color": "#E8F5EC"}}, "fontSize": 12, "fontFamily": "Segoe UI Semibold"}],
+        "labels": [{"color": {"solid": {"color": "#E8F5EC"}}}]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{"color": {"solid": {"color": "#0B3D2E"}}, "transparency": 0}]
+      }
+    }
+  }
+}

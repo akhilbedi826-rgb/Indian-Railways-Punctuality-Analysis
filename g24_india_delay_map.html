@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f9c23dd293daf2671d9f99d09c8aa148 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position:fixed;bottom:30px;left:30px;background:white;padding:10px;
+     border:1px solid #999;border-radius:6px;font-size:12px;z-index:9999">
+<b>Avg Arrival Delay</b><br>
+<span style="color:#2ecc71">●</span> &lt; 5 min &nbsp;
+<span style="color:#f1c40f">●</span> 5-10 &nbsp;
+<span style="color:#e67e22">●</span> 10-20 &nbsp;
+<span style="color:#c0392b">●</span> 20+
+</div>
+    
+            <div class="folium-map" id="map_f9c23dd293daf2671d9f99d09c8aa148" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f9c23dd293daf2671d9f99d09c8aa148 = L.map(
+                "map_f9c23dd293daf2671d9f99d09c8aa148",
+                {
+                    center: [22.5, 80.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_02a3af4c656f0cd47dc24137ef8840c1 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_02a3af4c656f0cd47dc24137ef8840c1.addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+            var circle_marker_0e186ddd265336213bd5e13575370ff0 = L.circleMarker(
+                [23.0258, 72.5873],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.760414691083428, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_3f015f517bf3a83759afe3ffff73950b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a1a879c9d078f04587b219129c1d7208 = $(`<div id="html_a1a879c9d078f04587b219129c1d7208" style="width: 100.0%; height: 100.0%;"><b>Ahmedabad Junction</b> (ADI)<br>Avg delay: 21.9 min<br>Trips: 862</div>`)[0];
+                popup_3f015f517bf3a83759afe3ffff73950b.setContent(html_a1a879c9d078f04587b219129c1d7208);
+            
+        
+
+        circle_marker_0e186ddd265336213bd5e13575370ff0.bindPopup(popup_3f015f517bf3a83759afe3ffff73950b)
+        ;
+
+        
+    
+    
+            var circle_marker_5607da9a2c4dc21b32350f055789f253 = L.circleMarker(
+                [27.159, 78.0571],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.87729607149743, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_0ad4e8e16d3f53d9593d420c8ec1f904 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_eb4d7bcdf63e46f3c9a8031444830634 = $(`<div id="html_eb4d7bcdf63e46f3c9a8031444830634" style="width: 100.0%; height: 100.0%;"><b>Agra Cantt</b> (AGC)<br>Avg delay: 10.1 min<br>Trips: 969</div>`)[0];
+                popup_0ad4e8e16d3f53d9593d420c8ec1f904.setContent(html_eb4d7bcdf63e46f3c9a8031444830634);
+            
+        
+
+        circle_marker_5607da9a2c4dc21b32350f055789f253.bindPopup(popup_0ad4e8e16d3f53d9593d420c8ec1f904)
+        ;
+
+        
+    
+    
+            var circle_marker_57e9e0829a8b9bc9a7b9473aeeb5efa1 = L.circleMarker(
+                [26.4499, 74.6399],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.052089168924418, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_2ef509b056b0d2776fe745f71b899901 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7c1e19f75b0188914935480e898b163d = $(`<div id="html_7c1e19f75b0188914935480e898b163d" style="width: 100.0%; height: 100.0%;"><b>Ajmer Junction</b> (AII)<br>Avg delay: 15.4 min<br>Trips: 424</div>`)[0];
+                popup_2ef509b056b0d2776fe745f71b899901.setContent(html_7c1e19f75b0188914935480e898b163d);
+            
+        
+
+        circle_marker_57e9e0829a8b9bc9a7b9473aeeb5efa1.bindPopup(popup_2ef509b056b0d2776fe745f71b899901)
+        ;
+
+        
+    
+    
+            var circle_marker_c2ce13babd0d890cc5acd548a9018aab = L.circleMarker(
+                [25.4358, 81.8463],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.502790045915624, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_71b08ad3415678721667b4c95b90516d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d98095349ab7f88b9b44bc4ebc33be5f = $(`<div id="html_d98095349ab7f88b9b44bc4ebc33be5f" style="width: 100.0%; height: 100.0%;"><b>Prayagraj Junction</b> (ALD)<br>Avg delay: 13.9 min<br>Trips: 666</div>`)[0];
+                popup_71b08ad3415678721667b4c95b90516d.setContent(html_d98095349ab7f88b9b44bc4ebc33be5f);
+            
+        
+
+        circle_marker_c2ce13babd0d890cc5acd548a9018aab.bindPopup(popup_71b08ad3415678721667b4c95b90516d)
+        ;
+
+        
+    
+    
+            var circle_marker_a8fd8c9668d19961066e29dc2c6719aa = L.circleMarker(
+                [31.634, 74.8723],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.424869023905387, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_ed809fc862ab093059c20b26dd51e042 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0cc080bb822b3892beb6a96cf15d5f38 = $(`<div id="html_0cc080bb822b3892beb6a96cf15d5f38" style="width: 100.0%; height: 100.0%;"><b>Amritsar Junction</b> (ASR)<br>Avg delay: 31.1 min<br>Trips: 616</div>`)[0];
+                popup_ed809fc862ab093059c20b26dd51e042.setContent(html_0cc080bb822b3892beb6a96cf15d5f38);
+            
+        
+
+        circle_marker_a8fd8c9668d19961066e29dc2c6719aa.bindPopup(popup_ed809fc862ab093059c20b26dd51e042)
+        ;
+
+        
+    
+    
+            var circle_marker_a5623e43fcd95abba300ce2013156f23 = L.circleMarker(
+                [20.2627, 85.8403],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.883322388488278, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_a7fef61f610c32265f0f8624348f7c2e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4173a71baf3f4d1211889080a567ac67 = $(`<div id="html_4173a71baf3f4d1211889080a567ac67" style="width: 100.0%; height: 100.0%;"><b>Bhubaneswar</b> (BBS)<br>Avg delay: 26.6 min<br>Trips: 358</div>`)[0];
+                popup_a7fef61f610c32265f0f8624348f7c2e.setContent(html_4173a71baf3f4d1211889080a567ac67);
+            
+        
+
+        circle_marker_a5623e43fcd95abba300ce2013156f23.bindPopup(popup_a7fef61f610c32265f0f8624348f7c2e)
+        ;
+
+        
+    
+    
+            var circle_marker_ce07417a55a8eec24d3c68d43472ce4b = L.circleMarker(
+                [18.9706, 72.8195],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.395721608602045, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_a2135c5319159d1ef10095fe34264915 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6ca41f5ee736753527e3e7b36f46593f = $(`<div id="html_6ca41f5ee736753527e3e7b36f46593f" style="width: 100.0%; height: 100.0%;"><b>Mumbai Central</b> (BCT)<br>Avg delay: 24.0 min<br>Trips: 1628</div>`)[0];
+                popup_a2135c5319159d1ef10095fe34264915.setContent(html_6ca41f5ee736753527e3e7b36f46593f);
+            
+        
+
+        circle_marker_ce07417a55a8eec24d3c68d43472ce4b.bindPopup(popup_a2135c5319159d1ef10095fe34264915)
+        ;
+
+        
+    
+    
+            var circle_marker_61fe027f0c8f9ce78d46443da1980710 = L.circleMarker(
+                [25.2427, 87.0095],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.276643489341645, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_fb5d83c881631beeaeffb1ed8734b2b1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8a1cb7d4882a9343b3ab4b09231ea6c4 = $(`<div id="html_8a1cb7d4882a9343b3ab4b09231ea6c4" style="width: 100.0%; height: 100.0%;"><b>Bhagalpur Junction</b> (BGP)<br>Avg delay: 25.8 min<br>Trips: 531</div>`)[0];
+                popup_fb5d83c881631beeaeffb1ed8734b2b1.setContent(html_8a1cb7d4882a9343b3ab4b09231ea6c4);
+            
+        
+
+        circle_marker_61fe027f0c8f9ce78d46443da1980710.bindPopup(popup_fb5d83c881631beeaeffb1ed8734b2b1)
+        ;
+
+        
+    
+    
+            var circle_marker_f572912ab9468cb0c871dcd83e01986e = L.circleMarker(
+                [22.3119, 73.1863],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.490723534502507, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_a208fe56523e5809dd3c8771c3875943 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3918464ad7d4f3feaaaaf90be7517c90 = $(`<div id="html_3918464ad7d4f3feaaaaf90be7517c90" style="width: 100.0%; height: 100.0%;"><b>Vadodara Junction</b> (BRC)<br>Avg delay: 21.2 min<br>Trips: 658</div>`)[0];
+                popup_a208fe56523e5809dd3c8771c3875943.setContent(html_3918464ad7d4f3feaaaaf90be7517c90);
+            
+        
+
+        circle_marker_f572912ab9468cb0c871dcd83e01986e.bindPopup(popup_a208fe56523e5809dd3c8771c3875943)
+        ;
+
+        
+    
+    
+            var circle_marker_5a386fa8cee7e4961141a5679718ec49 = L.circleMarker(
+                [25.3176, 82.9739],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.459585514144159, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_49c7236a495cbe233726f11bb7e19079 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bd649bcf6338e5ad599277cb079aaf62 = $(`<div id="html_bd649bcf6338e5ad599277cb079aaf62" style="width: 100.0%; height: 100.0%;"><b>Varanasi Junction</b> (BSB)<br>Avg delay: 5.6 min<br>Trips: 234</div>`)[0];
+                popup_49c7236a495cbe233726f11bb7e19079.setContent(html_bd649bcf6338e5ad599277cb079aaf62);
+            
+        
+
+        circle_marker_5a386fa8cee7e4961141a5679718ec49.bindPopup(popup_49c7236a495cbe233726f11bb7e19079)
+        ;
+
+        
+    
+    
+            var circle_marker_ce5a237648699f23282bf77f685062c9 = L.circleMarker(
+                [21.044, 75.804],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.262690188904886, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_8f2c4507a44c9a5d49c94f7928c64983 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6c0f940b380bc2674a5e813a8f6a2be1 = $(`<div id="html_6c0f940b380bc2674a5e813a8f6a2be1" style="width: 100.0%; height: 100.0%;"><b>Bhusaval Junction</b> (BSL)<br>Avg delay: 40.8 min<br>Trips: 192</div>`)[0];
+                popup_8f2c4507a44c9a5d49c94f7928c64983.setContent(html_6c0f940b380bc2674a5e813a8f6a2be1);
+            
+        
+
+        circle_marker_ce5a237648699f23282bf77f685062c9.bindPopup(popup_8f2c4507a44c9a5d49c94f7928c64983)
+        ;
+
+        
+    
+    
+            var circle_marker_22eb7fe8737d79efa6554b46e07745bd = L.circleMarker(
+                [23.2324, 87.8615],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.910750787961936, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_3e366ef7337845f01435355a3c89b04d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_400d06dc14eb201574b5bba3697dd1b3 = $(`<div id="html_400d06dc14eb201574b5bba3697dd1b3" style="width: 100.0%; height: 100.0%;"><b>Barddhaman Junction</b> (BWN)<br>Avg delay: 13.2 min<br>Trips: 1002</div>`)[0];
+                popup_3e366ef7337845f01435355a3c89b04d.setContent(html_400d06dc14eb201574b5bba3697dd1b3);
+            
+        
+
+        circle_marker_22eb7fe8737d79efa6554b46e07745bd.bindPopup(popup_3e366ef7337845f01435355a3c89b04d)
+        ;
+
+        
+    
+    
+            var circle_marker_30e59ad77069d03d5a3eabf2dbfd99ea = L.circleMarker(
+                [16.5192, 80.6152],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.129898714923073, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_64553231d538a42bcc91e3d8574a021e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c68bfdb17f810c1639e2e6b9b36558f4 = $(`<div id="html_c68bfdb17f810c1639e2e6b9b36558f4" style="width: 100.0%; height: 100.0%;"><b>Vijayawada Junction</b> (BZA)<br>Avg delay: 29.3 min<br>Trips: 168</div>`)[0];
+                popup_64553231d538a42bcc91e3d8574a021e.setContent(html_c68bfdb17f810c1639e2e6b9b36558f4);
+            
+        
+
+        circle_marker_30e59ad77069d03d5a3eabf2dbfd99ea.bindPopup(popup_64553231d538a42bcc91e3d8574a021e)
+        ;
+
+        
+    
+    
+            var circle_marker_864d4632b5055cf6dd494d739f562141 = L.circleMarker(
+                [11.0017, 76.9666],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.405495663199472, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_a3c6b08e8d8bc08c7f7a9380a2637541 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_03761b237b5f727ee2aa9f9c74c989fa = $(`<div id="html_03761b237b5f727ee2aa9f9c74c989fa" style="width: 100.0%; height: 100.0%;"><b>Coimbatore Junction</b> (CBE)<br>Avg delay: 23.9 min<br>Trips: 1644</div>`)[0];
+                popup_a3c6b08e8d8bc08c7f7a9380a2637541.setContent(html_03761b237b5f727ee2aa9f9c74c989fa);
+            
+        
+
+        circle_marker_864d4632b5055cf6dd494d739f562141.bindPopup(popup_a3c6b08e8d8bc08c7f7a9380a2637541)
+        ;
+
+        
+    
+    
+            var circle_marker_780899f5aa1da49002c75de67088e3b2 = L.circleMarker(
+                [30.6942, 76.7679],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.945420608606575, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_f92b536dcd6cf7a29f7bf2064ca7ca73 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_107ae1bd1bb286f67b08f8d5d6d40b5c = $(`<div id="html_107ae1bd1bb286f67b08f8d5d6d40b5c" style="width: 100.0%; height: 100.0%;"><b>Chandigarh</b> (CDG)<br>Avg delay: 17.1 min<br>Trips: 381</div>`)[0];
+                popup_f92b536dcd6cf7a29f7bf2064ca7ca73.setContent(html_107ae1bd1bb286f67b08f8d5d6d40b5c);
+            
+        
+
+        circle_marker_780899f5aa1da49002c75de67088e3b2.bindPopup(popup_f92b536dcd6cf7a29f7bf2064ca7ca73)
+        ;
+
+        
+    
+    
+            var circle_marker_9e0b068e4edbe2cb89dbcddf0e3f9c7e = L.circleMarker(
+                [26.4499, 80.3319],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.034387929915503, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_c481817b38eb0b997d890ff7d04a7c63 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_aecafb11e1dcb5194e4eab0697f491cd = $(`<div id="html_aecafb11e1dcb5194e4eab0697f491cd" style="width: 100.0%; height: 100.0%;"><b>Kanpur Central</b> (CNB)<br>Avg delay: 14.6 min<br>Trips: 1134</div>`)[0];
+                popup_c481817b38eb0b997d890ff7d04a7c63.setContent(html_aecafb11e1dcb5194e4eab0697f491cd);
+            
+        
+
+        circle_marker_9e0b068e4edbe2cb89dbcddf0e3f9c7e.bindPopup(popup_c481817b38eb0b997d890ff7d04a7c63)
+        ;
+
+        
+    
+    
+            var circle_marker_78a97e69a3703462aad48d5ccc69d195 = L.circleMarker(
+                [18.94, 72.8347],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.23993259132047, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_8538108a0f1857ea5052f92b9c19113e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_15d8a2d60c28d07130c87ef215f4e0ec = $(`<div id="html_15d8a2d60c28d07130c87ef215f4e0ec" style="width: 100.0%; height: 100.0%;"><b>Mumbai CSMT</b> (CSTM)<br>Avg delay: 28.0 min<br>Trips: 1393</div>`)[0];
+                popup_8538108a0f1857ea5052f92b9c19113e.setContent(html_15d8a2d60c28d07130c87ef215f4e0ec);
+            
+        
+
+        circle_marker_78a97e69a3703462aad48d5ccc69d195.bindPopup(popup_8538108a0f1857ea5052f92b9c19113e)
+        ;
+
+        
+    
+    
+            var circle_marker_2ef8abaeadb3b40a0480ea0ed580974f = L.circleMarker(
+                [27.4728, 95.0195],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.403574197934816, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_009884d8562f62c03f62ec8aad128669 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_19fd91be915d8699cdfb934cc4a5a573 = $(`<div id="html_19fd91be915d8699cdfb934cc4a5a573" style="width: 100.0%; height: 100.0%;"><b>Dibrugarh Town</b> (DBRG)<br>Avg delay: 33.4 min<br>Trips: 603</div>`)[0];
+                popup_009884d8562f62c03f62ec8aad128669.setContent(html_19fd91be915d8699cdfb934cc4a5a573);
+            
+        
+
+        circle_marker_2ef8abaeadb3b40a0480ea0ed580974f.bindPopup(popup_009884d8562f62c03f62ec8aad128669)
+        ;
+
+        
+    
+    
+            var circle_marker_20f8c397999902dd9c1ea1d8f111499a = L.circleMarker(
+                [30.3165, 78.0322],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.66988092298052, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_09773e63e92e3b27c36f4bee39765f56 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_33cae50e7d3e602b04ea278472d07314 = $(`<div id="html_33cae50e7d3e602b04ea278472d07314" style="width: 100.0%; height: 100.0%;"><b>Dehradun</b> (DDN)<br>Avg delay: 32.6 min<br>Trips: 289</div>`)[0];
+                popup_09773e63e92e3b27c36f4bee39765f56.setContent(html_33cae50e7d3e602b04ea278472d07314);
+            
+        
+
+        circle_marker_20f8c397999902dd9c1ea1d8f111499a.bindPopup(popup_09773e63e92e3b27c36f4bee39765f56)
+        ;
+
+        
+    
+    
+            var circle_marker_792c3f1f22c35ef5066c74c480a1b2a1 = L.circleMarker(
+                [28.66, 77.2298],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.950814768442584, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_ce7985ee8ebb8664fcd4217e5107b421 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3bc740bc0a12dde88ecc2079397c6b2c = $(`<div id="html_3bc740bc0a12dde88ecc2079397c6b2c" style="width: 100.0%; height: 100.0%;"><b>Old Delhi Junction</b> (DLI)<br>Avg delay: 31.7 min<br>Trips: 1043</div>`)[0];
+                popup_ce7985ee8ebb8664fcd4217e5107b421.setContent(html_3bc740bc0a12dde88ecc2079397c6b2c);
+            
+        
+
+        circle_marker_792c3f1f22c35ef5066c74c480a1b2a1.bindPopup(popup_ce7985ee8ebb8664fcd4217e5107b421)
+        ;
+
+        
+    
+    
+            var circle_marker_8e39d0f88a430df57daca79a13ce5178 = L.circleMarker(
+                [22.6153, 77.7557],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.806829360392175, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_cac41c2ace38c3c1187031ca3a2a3924 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_36c804edf22f8f81632465117cde7773 = $(`<div id="html_36c804edf22f8f81632465117cde7773" style="width: 100.0%; height: 100.0%;"><b>Itarsi Junction</b> (ET)<br>Avg delay: 17.0 min<br>Trips: 903</div>`)[0];
+                popup_cac41c2ace38c3c1187031ca3a2a3924.setContent(html_36c804edf22f8f81632465117cde7773);
+            
+        
+
+        circle_marker_8e39d0f88a430df57daca79a13ce5178.bindPopup(popup_cac41c2ace38c3c1187031ca3a2a3924)
+        ;
+
+        
+    
+    
+            var circle_marker_e0ea78332e374a901c42f9911e9345d0 = L.circleMarker(
+                [24.7955, 84.9994],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.690842277418565, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_358e51f832d6d66a976c949b2015ee89 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_abcaffbfea03dc4d3b377acea122c35c = $(`<div id="html_abcaffbfea03dc4d3b377acea122c35c" style="width: 100.0%; height: 100.0%;"><b>Gaya Junction</b> (GAYA)<br>Avg delay: 23.0 min<br>Trips: 804</div>`)[0];
+                popup_358e51f832d6d66a976c949b2015ee89.setContent(html_abcaffbfea03dc4d3b377acea122c35c);
+            
+        
+
+        circle_marker_e0ea78332e374a901c42f9911e9345d0.bindPopup(popup_358e51f832d6d66a976c949b2015ee89)
+        ;
+
+        
+    
+    
+            var circle_marker_cd31997e4b4b26ce1f4c5d6fb53db9ab = L.circleMarker(
+                [26.1445, 91.7362],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.674561391814425, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_3b22150deb7be1878b2a82719809bc41 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1b01dc2c24b6785aee5ed6e0e51b984a = $(`<div id="html_1b01dc2c24b6785aee5ed6e0e51b984a" style="width: 100.0%; height: 100.0%;"><b>Guwahati</b> (GHY)<br>Avg delay: 31.0 min<br>Trips: 791</div>`)[0];
+                popup_3b22150deb7be1878b2a82719809bc41.setContent(html_1b01dc2c24b6785aee5ed6e0e51b984a);
+            
+        
+
+        circle_marker_cd31997e4b4b26ce1f4c5d6fb53db9ab.bindPopup(popup_3b22150deb7be1878b2a82719809bc41)
+        ;
+
+        
+    
+    
+            var circle_marker_573e74b3c01dc17d200a0fb45fd4dc6f = L.circleMarker(
+                [26.7551, 83.3732],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.852030263919616, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_dec08eafdc2ed805b25295e657f5c940 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4f376b1d40f3a5923f4b348e615dfa6b = $(`<div id="html_4f376b1d40f3a5923f4b348e615dfa6b" style="width: 100.0%; height: 100.0%;"><b>Gorakhpur Junction</b> (GKP)<br>Avg delay: 13.2 min<br>Trips: 127</div>`)[0];
+                popup_dec08eafdc2ed805b25295e657f5c940.setContent(html_4f376b1d40f3a5923f4b348e615dfa6b);
+            
+        
+
+        circle_marker_573e74b3c01dc17d200a0fb45fd4dc6f.bindPopup(popup_dec08eafdc2ed805b25295e657f5c940)
+        ;
+
+        
+    
+    
+            var circle_marker_9f1d2546fd517a55e85306decc9b114e = L.circleMarker(
+                [23.232, 77.4382],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.225746673713202, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_5570a11679376d1802880d8cd10eec94 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4fccd30344d2ed9ef0f2eab9c44004c5 = $(`<div id="html_4fccd30344d2ed9ef0f2eab9c44004c5" style="width: 100.0%; height: 100.0%;"><b>Habibganj</b> (HBJ)<br>Avg delay: 8.3 min<br>Trips: 185</div>`)[0];
+                popup_5570a11679376d1802880d8cd10eec94.setContent(html_4fccd30344d2ed9ef0f2eab9c44004c5);
+            
+        
+
+        circle_marker_9f1d2546fd517a55e85306decc9b114e.bindPopup(popup_5570a11679376d1802880d8cd10eec94)
+        ;
+
+        
+    
+    
+            var circle_marker_892fea8eb87f45c9148ba02cd75d96a7 = L.circleMarker(
+                [29.9457, 78.1642],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.683579767338681, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_d06319eed9f8a5adb388cd3d7bdae456 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fff32bd73dbbe5c1f160b1dcc3d1fadc = $(`<div id="html_fff32bd73dbbe5c1f160b1dcc3d1fadc" style="width: 100.0%; height: 100.0%;"><b>Haridwar Junction</b> (HW)<br>Avg delay: 33.9 min<br>Trips: 293</div>`)[0];
+                popup_d06319eed9f8a5adb388cd3d7bdae456.setContent(html_fff32bd73dbbe5c1f160b1dcc3d1fadc);
+            
+        
+
+        circle_marker_892fea8eb87f45c9148ba02cd75d96a7.bindPopup(popup_d06319eed9f8a5adb388cd3d7bdae456)
+        ;
+
+        
+    
+    
+            var circle_marker_41dbcfe1d2dc843fe9d225fa47fc2bca = L.circleMarker(
+                [22.5839, 88.34],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.393263094763839, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_e61316cd28194252c6f82d6bcb73b358 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6f6c236d0c4c9a7f47f2d4c6fbb76b8f = $(`<div id="html_6f6c236d0c4c9a7f47f2d4c6fbb76b8f" style="width: 100.0%; height: 100.0%;"><b>Howrah Junction</b> (HWH)<br>Avg delay: 22.9 min<br>Trips: 1624</div>`)[0];
+                popup_e61316cd28194252c6f82d6bcb73b358.setContent(html_6f6c236d0c4c9a7f47f2d4c6fbb76b8f);
+            
+        
+
+        circle_marker_41dbcfe1d2dc843fe9d225fa47fc2bca.bindPopup(popup_e61316cd28194252c6f82d6bcb73b358)
+        ;
+
+        
+    
+    
+            var circle_marker_5f5024e33cf0a00be2b40f19e3424536 = L.circleMarker(
+                [17.385, 78.4867],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.46383180502561, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_24a3940a855ff060390b6d2e1755f752 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0ea40be66147f86e8f89f277ffe5d700 = $(`<div id="html_0ea40be66147f86e8f89f277ffe5d700" style="width: 100.0%; height: 100.0%;"><b>Hyderabad Deccan</b> (HYB)<br>Avg delay: 38.9 min<br>Trips: 235</div>`)[0];
+                popup_24a3940a855ff060390b6d2e1755f752.setContent(html_0ea40be66147f86e8f89f277ffe5d700);
+            
+        
+
+        circle_marker_5f5024e33cf0a00be2b40f19e3424536.bindPopup(popup_24a3940a855ff060390b6d2e1755f752)
+        ;
+
+        
+    
+    
+            var circle_marker_f7cec018e5f025a58346c0993479eac4 = L.circleMarker(
+                [23.1815, 79.9864],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.905274778438429, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_d4483c06bcb4e07041a11c0cb3f2aa64 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_eeba6701056634e82219f01565ef76f3 = $(`<div id="html_eeba6701056634e82219f01565ef76f3" style="width: 100.0%; height: 100.0%;"><b>Jabalpur Junction</b> (JBP)<br>Avg delay: 28.7 min<br>Trips: 134</div>`)[0];
+                popup_d4483c06bcb4e07041a11c0cb3f2aa64.setContent(html_eeba6701056634e82219f01565ef76f3);
+            
+        
+
+        circle_marker_f7cec018e5f025a58346c0993479eac4.bindPopup(popup_d4483c06bcb4e07041a11c0cb3f2aa64)
+        ;
+
+        
+    
+    
+            var circle_marker_0ef15cf3153e6ed4b272c1f801dda013 = L.circleMarker(
+                [26.9124, 75.8022],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.411818267709897, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_4f9795d9276aa2807901ad05bf12be4e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b73706b6c7fdbdd84321fb92d9202045 = $(`<div id="html_b73706b6c7fdbdd84321fb92d9202045" style="width: 100.0%; height: 100.0%;"><b>Jaipur Junction</b> (JP)<br>Avg delay: 18.2 min<br>Trips: 608</div>`)[0];
+                popup_4f9795d9276aa2807901ad05bf12be4e.setContent(html_b73706b6c7fdbdd84321fb92d9202045);
+            
+        
+
+        circle_marker_0ef15cf3153e6ed4b272c1f801dda013.bindPopup(popup_4f9795d9276aa2807901ad05bf12be4e)
+        ;
+
+        
+    
+    
+            var circle_marker_bb74d0cc859c313af1696f2bb1aa1f42 = L.circleMarker(
+                [32.7266, 74.857],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.164785973923514, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_faf19901a6bc1a1193521eb9adccb156 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_08ec9346fee5ff5dc6639eef62fe536e = $(`<div id="html_08ec9346fee5ff5dc6639eef62fe536e" style="width: 100.0%; height: 100.0%;"><b>Jammu Tawi</b> (JRC)<br>Avg delay: 45.0 min<br>Trips: 174</div>`)[0];
+                popup_faf19901a6bc1a1193521eb9adccb156.setContent(html_08ec9346fee5ff5dc6639eef62fe536e);
+            
+        
+
+        circle_marker_bb74d0cc859c313af1696f2bb1aa1f42.bindPopup(popup_faf19901a6bc1a1193521eb9adccb156)
+        ;
+
+        
+    
+    
+            var circle_marker_3814642359433633ef8c76d5e5b5e765 = L.circleMarker(
+                [31.326, 75.5762],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.14166355650266, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_53f32144041060c594a743446f0486e4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b479c9c29a8978fea501ed285974d7a8 = $(`<div id="html_b479c9c29a8978fea501ed285974d7a8" style="width: 100.0%; height: 100.0%;"><b>Jalandhar City</b> (JUC)<br>Avg delay: 42.3 min<br>Trips: 170</div>`)[0];
+                popup_53f32144041060c594a743446f0486e4.setContent(html_b479c9c29a8978fea501ed285974d7a8);
+            
+        
+
+        circle_marker_3814642359433633ef8c76d5e5b5e765.bindPopup(popup_53f32144041060c594a743446f0486e4)
+        ;
+
+        
+    
+    
+            var circle_marker_300af2be76dfa66f36fc6a240f1d44e5 = L.circleMarker(
+                [22.346, 87.3232],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.369900982828227, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_8a7686411cff9ffcf515c4ec7473bb8b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_05c1734b44520319a6116edd2a826df1 = $(`<div id="html_05c1734b44520319a6116edd2a826df1" style="width: 100.0%; height: 100.0%;"><b>Kharagpur Junction</b> (KGP)<br>Avg delay: 19.0 min<br>Trips: 583</div>`)[0];
+                popup_8a7686411cff9ffcf515c4ec7473bb8b.setContent(html_05c1734b44520319a6116edd2a826df1);
+            
+        
+
+        circle_marker_300af2be76dfa66f36fc6a240f1d44e5.bindPopup(popup_8a7686411cff9ffcf515c4ec7473bb8b)
+        ;
+
+        
+    
+    
+            var circle_marker_e3a75e778a1b564766538688f9f06da5 = L.circleMarker(
+                [25.5512, 87.5788],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.381816017406098, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_704138a57c553a4c0cbde6b77734b702 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_21fc03a80c07cfbed84e9077412a9c36 = $(`<div id="html_21fc03a80c07cfbed84e9077412a9c36" style="width: 100.0%; height: 100.0%;"><b>Katihar Junction</b> (KIR)<br>Avg delay: 32.8 min<br>Trips: 590</div>`)[0];
+                popup_704138a57c553a4c0cbde6b77734b702.setContent(html_21fc03a80c07cfbed84e9077412a9c36);
+            
+        
+
+        circle_marker_e3a75e778a1b564766538688f9f06da5.bindPopup(popup_704138a57c553a4c0cbde6b77734b702)
+        ;
+
+        
+    
+    
+            var circle_marker_8c4d65d247eb66dac750b7b08f35365c = L.circleMarker(
+                [25.1802, 75.8386],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.618738983517218, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_b1e0030bf2f0bbd0df06e59510074727 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5af74eaf74a322d674aa8ae95361d644 = $(`<div id="html_5af74eaf74a322d674aa8ae95361d644" style="width: 100.0%; height: 100.0%;"><b>Kota Junction</b> (KOTA)<br>Avg delay: 14.7 min<br>Trips: 748</div>`)[0];
+                popup_b1e0030bf2f0bbd0df06e59510074727.setContent(html_5af74eaf74a322d674aa8ae95361d644);
+            
+        
+
+        circle_marker_8c4d65d247eb66dac750b7b08f35365c.bindPopup(popup_b1e0030bf2f0bbd0df06e59510074727)
+        ;
+
+        
+    
+    
+            var circle_marker_5cec5aef172a75087b0987afd1e37fb0 = L.circleMarker(
+                [30.901, 75.8573],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.084499413075172, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_f3d2371a1e158d59e979597a6d61a360 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d2fe0328e9916b28445cbd08d875aecb = $(`<div id="html_d2fe0328e9916b28445cbd08d875aecb" style="width: 100.0%; height: 100.0%;"><b>Ludhiana Junction</b> (LDH)<br>Avg delay: 35.1 min<br>Trips: 438</div>`)[0];
+                popup_f3d2371a1e158d59e979597a6d61a360.setContent(html_d2fe0328e9916b28445cbd08d875aecb);
+            
+        
+
+        circle_marker_5cec5aef172a75087b0987afd1e37fb0.bindPopup(popup_f3d2371a1e158d59e979597a6d61a360)
+        ;
+
+        
+    
+    
+            var circle_marker_69028051d2fe66279913a38852853daf = L.circleMarker(
+                [26.85, 80.9152],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.68697535633982, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_9f18251cca029a894769e74710ed65fe = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_07e57f1ae77e9a87a2c2808d2b161798 = $(`<div id="html_07e57f1ae77e9a87a2c2808d2b161798" style="width: 100.0%; height: 100.0%;"><b>Lucknow Charbagh</b> (LKO)<br>Avg delay: 27.4 min<br>Trips: 294</div>`)[0];
+                popup_9f18251cca029a894769e74710ed65fe.setContent(html_07e57f1ae77e9a87a2c2808d2b161798);
+            
+        
+
+        circle_marker_69028051d2fe66279913a38852853daf.bindPopup(popup_9f18251cca029a894769e74710ed65fe)
+        ;
+
+        
+    
+    
+            var circle_marker_5e5dd38682c45da389baa1636b507f77 = L.circleMarker(
+                [19.0414, 72.9205],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.231108616854588, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_2c1941b6aa602690719df2e7d34ca3af = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_de0c874d27ff382b2a96c0f7df9844ab = $(`<div id="html_de0c874d27ff382b2a96c0f7df9844ab" style="width: 100.0%; height: 100.0%;"><b>Lokmanya Tilak Terminus</b> (LTT)<br>Avg delay: 43.3 min<br>Trips: 186</div>`)[0];
+                popup_2c1941b6aa602690719df2e7d34ca3af.setContent(html_de0c874d27ff382b2a96c0f7df9844ab);
+            
+        
+
+        circle_marker_5e5dd38682c45da389baa1636b507f77.bindPopup(popup_2c1941b6aa602690719df2e7d34ca3af)
+        ;
+
+        
+    
+    
+            var circle_marker_f91c342c83d8136aa752aa5b1fcf0bf7 = L.circleMarker(
+                [13.0827, 80.2707],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.254788926148725, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_fef691ee87f21bd6d4f5d951892ae071 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_68e4f17e384ff094b6cc55a83fa7a87b = $(`<div id="html_68e4f17e384ff094b6cc55a83fa7a87b" style="width: 100.0%; height: 100.0%;"><b>Chennai Central</b> (MAS)<br>Avg delay: 29.2 min<br>Trips: 3845</div>`)[0];
+                popup_fef691ee87f21bd6d4f5d951892ae071.setContent(html_68e4f17e384ff094b6cc55a83fa7a87b);
+            
+        
+
+        circle_marker_f91c342c83d8136aa752aa5b1fcf0bf7.bindPopup(popup_fef691ee87f21bd6d4f5d951892ae071)
+        ;
+
+        
+    
+    
+            var circle_marker_1959f12a3213f24893669f62730c16bc = L.circleMarker(
+                [28.8386, 78.7733],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.117993812416756, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_f5d91e080f2e76c7327806f3e35d0cea = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6cc41350ea040879f4bb04f8bf7b50e0 = $(`<div id="html_6cc41350ea040879f4bb04f8bf7b50e0" style="width: 100.0%; height: 100.0%;"><b>Moradabad Junction</b> (MB)<br>Avg delay: 37.3 min<br>Trips: 166</div>`)[0];
+                popup_f5d91e080f2e76c7327806f3e35d0cea.setContent(html_6cc41350ea040879f4bb04f8bf7b50e0);
+            
+        
+
+        circle_marker_1959f12a3213f24893669f62730c16bc.bindPopup(popup_f5d91e080f2e76c7327806f3e35d0cea)
+        ;
+
+        
+    
+    
+            var circle_marker_f74ecfc8b66934ed6a37ec34c4e5766d = L.circleMarker(
+                [9.9252, 78.1198],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.639875833826537, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_20f6c6e6a94bc35253ea11864e6c73bf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0144ec42b70279de22c3f3ad381f2af9 = $(`<div id="html_0144ec42b70279de22c3f3ad381f2af9" style="width: 100.0%; height: 100.0%;"><b>Madurai Junction</b> (MDU)<br>Avg delay: 36.9 min<br>Trips: 764</div>`)[0];
+                popup_20f6c6e6a94bc35253ea11864e6c73bf.setContent(html_0144ec42b70279de22c3f3ad381f2af9);
+            
+        
+
+        circle_marker_f74ecfc8b66934ed6a37ec34c4e5766d.bindPopup(popup_20f6c6e6a94bc35253ea11864e6c73bf)
+        ;
+
+        
+    
+    
+            var circle_marker_0f54a2b056b8fb804a041381f70cda73 = L.circleMarker(
+                [12.8703, 74.8426],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.641907070938114, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_4e7bbd291368c4baa30f0a24225c12b7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8c42d9ed32d62b4db8e6704f423da0e2 = $(`<div id="html_8c42d9ed32d62b4db8e6704f423da0e2" style="width: 100.0%; height: 100.0%;"><b>Mangaluru Central</b> (MQ)<br>Avg delay: 35.7 min<br>Trips: 281</div>`)[0];
+                popup_4e7bbd291368c4baa30f0a24225c12b7.setContent(html_8c42d9ed32d62b4db8e6704f423da0e2);
+            
+        
+
+        circle_marker_0f54a2b056b8fb804a041381f70cda73.bindPopup(popup_4e7bbd291368c4baa30f0a24225c12b7)
+        ;
+
+        
+    
+    
+            var circle_marker_0da268e226c1607827472328db844b58 = L.circleMarker(
+                [28.6448, 77.2167],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.790282380703484, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_5390196e772b542dc61156eec3ce1d4e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_848a30a6ec2c0bc4bd9131d6c0c062f4 = $(`<div id="html_848a30a6ec2c0bc4bd9131d6c0c062f4" style="width: 100.0%; height: 100.0%;"><b>New Delhi</b> (NDLS)<br>Avg delay: 16.5 min<br>Trips: 2416</div>`)[0];
+                popup_5390196e772b542dc61156eec3ce1d4e.setContent(html_848a30a6ec2c0bc4bd9131d6c0c062f4);
+            
+        
+
+        circle_marker_0da268e226c1607827472328db844b58.bindPopup(popup_5390196e772b542dc61156eec3ce1d4e)
+        ;
+
+        
+    
+    
+            var circle_marker_363d41871a0562259ca1a6483a76fcdf = L.circleMarker(
+                [21.1466, 79.086],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.396335293800808, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_81613f0a05e700f19c69148bf2c9b1c1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_297b55036254591f471c57327682ad93 = $(`<div id="html_297b55036254591f471c57327682ad93" style="width: 100.0%; height: 100.0%;"><b>Nagpur Junction</b> (NGP)<br>Avg delay: 30.9 min<br>Trips: 1629</div>`)[0];
+                popup_81613f0a05e700f19c69148bf2c9b1c1.setContent(html_297b55036254591f471c57327682ad93);
+            
+        
+
+        circle_marker_363d41871a0562259ca1a6483a76fcdf.bindPopup(popup_81613f0a05e700f19c69148bf2c9b1c1)
+        ;
+
+        
+    
+    
+            var circle_marker_fdf31a6b313ffd5edd165ae4ff9e1c11 = L.circleMarker(
+                [26.7064, 88.1622],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.488937726156687, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_11ba8217c58efc7a2f3fcfa9ba679fe9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e3fea093e40163aa27434ded85d20fc8 = $(`<div id="html_e3fea093e40163aa27434ded85d20fc8" style="width: 100.0%; height: 100.0%;"><b>New Jalpaiguri</b> (NJP)<br>Avg delay: 5.4 min<br>Trips: 241</div>`)[0];
+                popup_11ba8217c58efc7a2f3fcfa9ba679fe9.setContent(html_e3fea093e40163aa27434ded85d20fc8);
+            
+        
+
+        circle_marker_fdf31a6b313ffd5edd165ae4ff9e1c11.bindPopup(popup_11ba8217c58efc7a2f3fcfa9ba679fe9)
+        ;
+
+        
+    
+    
+            var circle_marker_90daaeba873025f0b7dca0ea560009e0 = L.circleMarker(
+                [28.5805, 77.2502],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.244166900663735, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_cea1d4dad050f46332cbc4b7e48dde32 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e5f66aaac4aac32e8272083bdb30da4a = $(`<div id="html_e5f66aaac4aac32e8272083bdb30da4a" style="width: 100.0%; height: 100.0%;"><b>Hazrat Nizamuddin</b> (NZM)<br>Avg delay: 8.8 min<br>Trips: 514</div>`)[0];
+                popup_cea1d4dad050f46332cbc4b7e48dde32.setContent(html_e5f66aaac4aac32e8272083bdb30da4a);
+            
+        
+
+        circle_marker_90daaeba873025f0b7dca0ea560009e0.bindPopup(popup_cea1d4dad050f46332cbc4b7e48dde32)
+        ;
+
+        
+    
+    
+            var circle_marker_e3b252a149a6e90087b0deb2b000a813 = L.circleMarker(
+                [25.6093, 85.1376],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.664346632098617, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_9437e2d621a821503c41ba6f27eafe2e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f65dc9d64ba87057183efbda9698118d = $(`<div id="html_f65dc9d64ba87057183efbda9698118d" style="width: 100.0%; height: 100.0%;"><b>Patna Junction</b> (PNBE)<br>Avg delay: 23.5 min<br>Trips: 2130</div>`)[0];
+                popup_9437e2d621a821503c41ba6f27eafe2e.setContent(html_f65dc9d64ba87057183efbda9698118d);
+            
+        
+
+        circle_marker_e3b252a149a6e90087b0deb2b000a813.bindPopup(popup_9437e2d621a821503c41ba6f27eafe2e)
+        ;
+
+        
+    
+    
+            var circle_marker_934f96b263de2d468a87dfb76164bffb = L.circleMarker(
+                [32.2643, 75.6421],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.17048399503815, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_08536d70c1718c7ec3ba0b1ef934ad63 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_50442cba66a4ddf0b6957e9e994b327c = $(`<div id="html_50442cba66a4ddf0b6957e9e994b327c" style="width: 100.0%; height: 100.0%;"><b>Pathankot Junction</b> (PTK)<br>Avg delay: 41.6 min<br>Trips: 175</div>`)[0];
+                popup_08536d70c1718c7ec3ba0b1ef934ad63.setContent(html_50442cba66a4ddf0b6957e9e994b327c);
+            
+        
+
+        circle_marker_934f96b263de2d468a87dfb76164bffb.bindPopup(popup_08536d70c1718c7ec3ba0b1ef934ad63)
+        ;
+
+        
+    
+    
+            var circle_marker_f91574346efc29dd4cce4bb6a15e19eb = L.circleMarker(
+                [18.5281, 73.8742],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.380122536899766, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_8f0cf73c51efd3e0777f0f2ebde9d8f2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b1fa31b472f41ae21a643c70d833d1ca = $(`<div id="html_b1fa31b472f41ae21a643c70d833d1ca" style="width: 100.0%; height: 100.0%;"><b>Pune Junction</b> (PUNE)<br>Avg delay: 15.8 min<br>Trips: 589</div>`)[0];
+                popup_8f0cf73c51efd3e0777f0f2ebde9d8f2.setContent(html_b1fa31b472f41ae21a643c70d833d1ca);
+            
+        
+
+        circle_marker_f91574346efc29dd4cce4bb6a15e19eb.bindPopup(popup_8f0cf73c51efd3e0777f0f2ebde9d8f2)
+        ;
+
+        
+    
+    
+            var circle_marker_de248996e0d3d28837f394f865a93b2a = L.circleMarker(
+                [11.6644, 78.146],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.581719640125307, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_4517d26af6e554b2fc94f1eb1279cbdf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_39d2967d97687df754732a7883322cd3 = $(`<div id="html_39d2967d97687df754732a7883322cd3" style="width: 100.0%; height: 100.0%;"><b>Salem Junction</b> (SA)<br>Avg delay: 25.8 min<br>Trips: 1961</div>`)[0];
+                popup_4517d26af6e554b2fc94f1eb1279cbdf.setContent(html_39d2967d97687df754732a7883322cd3);
+            
+        
+
+        circle_marker_de248996e0d3d28837f394f865a93b2a.bindPopup(popup_4517d26af6e554b2fc94f1eb1279cbdf)
+        ;
+
+        
+    
+    
+            var circle_marker_7c06ceb36cedc5038ec8b9f883ddc358 = L.circleMarker(
+                [12.978, 77.573],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.05443934626937, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_7170552d29e618649ac1f9d8724c60bc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c66bf97519af6885fd75eea9f89b9907 = $(`<div id="html_c66bf97519af6885fd75eea9f89b9907" style="width: 100.0%; height: 100.0%;"><b>KSR Bengaluru City</b> (SBC)<br>Avg delay: 17.3 min<br>Trips: 425</div>`)[0];
+                popup_7170552d29e618649ac1f9d8724c60bc.setContent(html_c66bf97519af6885fd75eea9f89b9907);
+            
+        
+
+        circle_marker_7c06ceb36cedc5038ec8b9f883ddc358.bindPopup(popup_7170552d29e618649ac1f9d8724c60bc)
+        ;
+
+        
+    
+    
+            var circle_marker_cb2e754b33c40c3501c29a1469f2ad59 = L.circleMarker(
+                [17.4344, 78.4983],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.384610383176973, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_41cdfd049a9b78a95379c629ab84e6da = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0f688c7faf5fc1865173f65643a64ecb = $(`<div id="html_0f688c7faf5fc1865173f65643a64ecb" style="width: 100.0%; height: 100.0%;"><b>Secunderabad Junction</b> (SC)<br>Avg delay: 28.3 min<br>Trips: 1610</div>`)[0];
+                popup_41cdfd049a9b78a95379c629ab84e6da.setContent(html_0f688c7faf5fc1865173f65643a64ecb);
+            
+        
+
+        circle_marker_cb2e754b33c40c3501c29a1469f2ad59.bindPopup(popup_41cdfd049a9b78a95379c629ab84e6da)
+        ;
+
+        
+    
+    
+            var circle_marker_0959a4c5046e24176d75c552c5427d6c = L.circleMarker(
+                [22.5685, 88.3699],
+                {"bubblingMouseEvents": true, "color": "#e67e22", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e67e22", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.765191102784843, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_57d9006a6e8e12f8128cee49f5d81426 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7f7f7a9e03b7b453ba2b90f2ae81e28b = $(`<div id="html_7f7f7a9e03b7b453ba2b90f2ae81e28b" style="width: 100.0%; height: 100.0%;"><b>Sealdah</b> (SDAH)<br>Avg delay: 16.1 min<br>Trips: 318</div>`)[0];
+                popup_57d9006a6e8e12f8128cee49f5d81426.setContent(html_7f7f7a9e03b7b453ba2b90f2ae81e28b);
+            
+        
+
+        circle_marker_0959a4c5046e24176d75c552c5427d6c.bindPopup(popup_57d9006a6e8e12f8128cee49f5d81426)
+        ;
+
+        
+    
+    
+            var circle_marker_0942009ad6c0f4efc1c7854a0aa0598f = L.circleMarker(
+                [21.2064, 72.8359],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.271703706887369, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_db4f596797cab90039a21c04192357d3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b66b276b5b73b85eb25794ef54fe214f = $(`<div id="html_b66b276b5b73b85eb25794ef54fe214f" style="width: 100.0%; height: 100.0%;"><b>Surat</b> (ST)<br>Avg delay: 23.1 min<br>Trips: 1438</div>`)[0];
+                popup_db4f596797cab90039a21c04192357d3.setContent(html_b66b276b5b73b85eb25794ef54fe214f);
+            
+        
+
+        circle_marker_0942009ad6c0f4efc1c7854a0aa0598f.bindPopup(popup_db4f596797cab90039a21c04192357d3)
+        ;
+
+        
+    
+    
+            var circle_marker_1fd76eac353571dc82bbb3c7a1cac4ab = L.circleMarker(
+                [8.7139, 77.7567],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.532334292222348, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_5acedb6fe86f916a880ed4736a0a3c3f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fe3697f9fd4b4b2dd267a22d287ed505 = $(`<div id="html_fe3697f9fd4b4b2dd267a22d287ed505" style="width: 100.0%; height: 100.0%;"><b>Tirunelveli Junction</b> (TEN)<br>Avg delay: 41.4 min<br>Trips: 686</div>`)[0];
+                popup_5acedb6fe86f916a880ed4736a0a3c3f.setContent(html_fe3697f9fd4b4b2dd267a22d287ed505);
+            
+        
+
+        circle_marker_1fd76eac353571dc82bbb3c7a1cac4ab.bindPopup(popup_5acedb6fe86f916a880ed4736a0a3c3f)
+        ;
+
+        
+    
+    
+            var circle_marker_eda9547057eba082fb841ed8a92b5132 = L.circleMarker(
+                [8.4875, 76.9525],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.184148890937482, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_6c42fb7f71002e4d36d55cd9f8ace34d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1393ce92000ffe7810889a66ab3ff299 = $(`<div id="html_1393ce92000ffe7810889a66ab3ff299" style="width: 100.0%; height: 100.0%;"><b>Trivandrum Central</b> (TVC)<br>Avg delay: 29.4 min<br>Trips: 484</div>`)[0];
+                popup_6c42fb7f71002e4d36d55cd9f8ace34d.setContent(html_1393ce92000ffe7810889a66ab3ff299);
+            
+        
+
+        circle_marker_eda9547057eba082fb841ed8a92b5132.bindPopup(popup_6c42fb7f71002e4d36d55cd9f8ace34d)
+        ;
+
+        
+    
+    
+            var circle_marker_9908f51fa16c13a8f880035148f63281 = L.circleMarker(
+                [30.3782, 76.827],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.579251212010101, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_ad76ac23203a89482c0d48bc62d7f408 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9f3fee8829cc3ade4fc42730299cb660 = $(`<div id="html_9f3fee8829cc3ade4fc42730299cb660" style="width: 100.0%; height: 100.0%;"><b>Ambala Cantt Junction</b> (UMB)<br>Avg delay: 42.7 min<br>Trips: 719</div>`)[0];
+                popup_ad76ac23203a89482c0d48bc62d7f408.setContent(html_9f3fee8829cc3ade4fc42730299cb660);
+            
+        
+
+        circle_marker_9908f51fa16c13a8f880035148f63281.bindPopup(popup_ad76ac23203a89482c0d48bc62d7f408)
+        ;
+
+        
+    
+    
+            var circle_marker_cff133cf97f5e1ac13bdecc1b84eebf3 = L.circleMarker(
+                [17.6868, 83.2185],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.877735781779638, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_615547cc9f57c45a68f5d52388b14e6e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_547bd1ba2ee2b819fd1b78e0ff9e4c7b = $(`<div id="html_547bd1ba2ee2b819fd1b78e0ff9e4c7b" style="width: 100.0%; height: 100.0%;"><b>Visakhapatnam Junction</b> (VSKP)<br>Avg delay: 26.4 min<br>Trips: 356</div>`)[0];
+                popup_615547cc9f57c45a68f5d52388b14e6e.setContent(html_547bd1ba2ee2b819fd1b78e0ff9e4c7b);
+            
+        
+
+        circle_marker_cff133cf97f5e1ac13bdecc1b84eebf3.bindPopup(popup_615547cc9f57c45a68f5d52388b14e6e)
+        ;
+
+        
+    
+    
+            var circle_marker_287afa1c17dacaa1ae48531c3faa292d = L.circleMarker(
+                [13.0178, 77.5356],
+                {"bubblingMouseEvents": true, "color": "#c0392b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c0392b", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.71373280550937, "stroke": true, "weight": 1}
+            ).addTo(map_f9c23dd293daf2671d9f99d09c8aa148);
+        
+    
+        var popup_58e006e4c9a8d85adaad901b4914b398 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6bc86e3e27618081213974baaca52584 = $(`<div id="html_6bc86e3e27618081213974baaca52584" style="width: 100.0%; height: 100.0%;"><b>Yesvantpur Junction</b> (YPR)<br>Avg delay: 24.9 min<br>Trips: 302</div>`)[0];
+                popup_58e006e4c9a8d85adaad901b4914b398.setContent(html_6bc86e3e27618081213974baaca52584);
+            
+        
+
+        circle_marker_287afa1c17dacaa1ae48531c3faa292d.bindPopup(popup_58e006e4c9a8d85adaad901b4914b398)
+        ;
+
+        
+    
+</script>
+</html>

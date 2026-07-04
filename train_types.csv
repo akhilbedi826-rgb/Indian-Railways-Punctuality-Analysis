@@ -1,0 +1,10 @@
+Train_Type,Description,Coach_Classes,Reservation_Required,Avg_Punctuality_Pct,Avg_Delay_Min,Avg_Speed_KMPH
+Rajdhani,Premium overnight express; reserved AC coaches; connects state capitals to New Delhi,AC 1/2/3 Tier,True,75,8,140
+Shatabdi,Day intercity express; fully AC chair car; short-to-medium distance,AC Chair Car,True,80,6,150
+Vande Bharat,Semi-high-speed self-propelled trainset; modern comfort; Day express,AC Chair Car,True,85,4,160
+Duronto,Non-stop point-to-point premium express; AC coaches; very few or no intermediate halts,AC 1/2/3 Tier,True,68,12,130
+Superfast,Faster-than-average intercity or long-distance train; mixed class,SL / AC 3/2,True,58,18,110
+Mail/Express,Traditional long-distance train; stops at many stations; oldest category,SL / AC 3/2,False,48,25,90
+Express,Regional express; serves medium to long distance; more halts than superfast,SL / AC 3/2,False,45,28,85
+InterCity,Day express for intra-state or short inter-state travel; high frequency,AC Chair / CC,False,62,14,100
+Passenger,Slow local train; stops at all stations; cheapest travel option,General / SL,False,40,35,55

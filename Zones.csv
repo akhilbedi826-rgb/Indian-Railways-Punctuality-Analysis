@@ -1,0 +1,18 @@
+Zone_Code,Zone_Name,Headquarters,Region
+NR,Northern Railway,New Delhi,North
+NER,North Eastern Railway,Gorakhpur,North
+NFR,Northeast Frontier Railway,Guwahati,Northeast
+ER,Eastern Railway,Kolkata,East
+SER,South Eastern Railway,Kolkata,East
+ECR,East Central Railway,Hajipur,East
+ECoR,East Coast Railway,Bhubaneswar,East
+CR,Central Railway,Mumbai,West
+WR,Western Railway,Mumbai,West
+NWR,North Western Railway,Jaipur,West
+WCR,West Central Railway,Jabalpur,West
+SCR,South Central Railway,Secunderabad,South
+SR,Southern Railway,Chennai,South
+SWR,South Western Railway,Hubballi,South
+SECR,South East Central Railway,Bilaspur,East
+NCR,North Central Railway,Prayagraj,North
+KR,Konkan Railway,Navi Mumbai,West

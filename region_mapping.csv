@@ -1,0 +1,6 @@
+Region,Zone_Codes,Hub_City,States_Covered
+North,"NR, NER, NCR",New Delhi,Hindi Heartland + Himalayas
+East,"ER, SER, ECR, ECoR, SECR",Kolkata,"Bengal, Bihar, Jharkhand, Odisha"
+West,"CR, WR, NWR, WCR, KR",Mumbai,"Maharashtra, Gujarat, Rajasthan, MP"
+South,"SR, SCR, SWR",Chennai,"Tamil Nadu, Karnataka, AP, Telangana, Kerala"
+Northeast,NFR,Guwahati,"Assam, Arunachal, Tripura, Meghalaya"
